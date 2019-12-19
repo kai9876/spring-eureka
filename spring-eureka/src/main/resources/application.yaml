@@ -1,0 +1,16 @@
+server:
+  port: 1111
+  
+spring:
+  application: 
+    name: spring-eureka
+    
+eureka:
+  instance:
+    hostname: 116.62.56.23
+  client: 
+    register-with-eureka: false
+    fetch-registry: false
+    service-url: 
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      
